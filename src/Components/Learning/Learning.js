@@ -61,6 +61,9 @@ class Learning extends Component {
       this.setState({ currentPage: page });
     }
   };
+  onTestClick = ()=>{
+    window.location.replace('/quiz')
+  }
   render() {
     var {
       isDislayForm,
@@ -171,7 +174,9 @@ class Learning extends Component {
                 </div>
               </div>
               <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                <Test listItem={listItem}></Test>
+                <Test listItem={listItem}
+                  onTestClick= {this.onTestClick}
+                ></Test>
               </div>
               <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 page">
                 <Panigation

@@ -1,2 +1,2 @@
 import Questionner from "./questionner";
-export {Questionner} ;
+export {Questionner};

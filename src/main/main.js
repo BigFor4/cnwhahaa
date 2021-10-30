@@ -22,7 +22,7 @@ class Main extends Component {
     }
   }
   onLeaning = () =>{
-    window.location.replace('/Leaning');
+    window.location.replace('/Learning');
   }
   onAddJob = () =>{
     if(this.state.tasksEditing !== null && this.state.isDislayForm === true){

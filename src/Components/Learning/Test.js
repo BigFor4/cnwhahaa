@@ -11,7 +11,7 @@ class Test extends Component {
         
     }
     render(){
-        const { listItem } = this.props;
+        const { listItem,onTestClick} = this.props;
         var elmListItem = listItem.map((listItem,index)=>{
             return <div key={index} className='col-xs-12 col-sm-12 col-md-6 col-lg-4 mt-15 card-test'>
                         <div className='card'>
@@ -29,7 +29,7 @@ class Test extends Component {
                                             <h6>Time:&nbsp;{listItem.time}</h6>
                                         </div>
                                         <div className='col-xs-12 col-sm-4 col-md-6 col-lg-6 start'>
-                                            <button className='btn btn-success'>Bắt đầu</button>
+                                            <button className='btn btn-success' onClick={onTestClick}>Bắt đầu</button>
                                         </div>
                                     </div>
                                 </div>

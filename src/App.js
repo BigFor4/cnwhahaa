@@ -16,9 +16,9 @@ class App extends Component {
         <Switch>
           <Route path="/" exact component={Login} />
           <Route path="/login" exact component={Login} />
-          <Route path="/quiz" exact component={Quiz} />
+          <Route path="/quiz" exact component={() => (user === '' ? <Login/> : <Quiz/>)} />
           <Route path="/job" exact component={() => (user === '' ? <Login/> : <Main/>)} />
-          <Route path="/leaning" exact component={() => (user === '' ? <Login/> : <Learning/>)} />
+          <Route path="/learning" exact component={() => (user === '' ? <Login/> : <Learning/>)} />
           <Route component={NotFound}></Route>
         </Switch>
       </Router>
