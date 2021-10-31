@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/BigFor4/cnwhahaa/static/css/main.fded4558.chunk.css",
+    "main.js": "/BigFor4/cnwhahaa/static/js/main.fa5bb0b8.chunk.js",
+    "main.js.map": "/BigFor4/cnwhahaa/static/js/main.fa5bb0b8.chunk.js.map",
+    "runtime-main.js": "/BigFor4/cnwhahaa/static/js/runtime-main.c5ecc595.js",
+    "runtime-main.js.map": "/BigFor4/cnwhahaa/static/js/runtime-main.c5ecc595.js.map",
+    "static/js/2.bed0cffc.chunk.js": "/BigFor4/cnwhahaa/static/js/2.bed0cffc.chunk.js",
+    "static/js/2.bed0cffc.chunk.js.map": "/BigFor4/cnwhahaa/static/js/2.bed0cffc.chunk.js.map",
+    "index.html": "/BigFor4/cnwhahaa/index.html",
+    "static/css/main.fded4558.chunk.css.map": "/BigFor4/cnwhahaa/static/css/main.fded4558.chunk.css.map",
+    "static/js/2.bed0cffc.chunk.js.LICENSE.txt": "/BigFor4/cnwhahaa/static/js/2.bed0cffc.chunk.js.LICENSE.txt",
+    "static/media/quiz.css": "/BigFor4/cnwhahaa/static/media/content.98a17510.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c5ecc595.js",
+    "static/js/2.bed0cffc.chunk.js",
+    "static/css/main.fded4558.chunk.css",
+    "static/js/main.fa5bb0b8.chunk.js"
+  ]
+}
