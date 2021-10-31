@@ -4,20 +4,24 @@ class TaskSearchControl extends Component {
     constructor(props){
         super(props);
         this.state ={
-            filterName: ''
+            filter: {
+                name: '',
+                status: -1
+            }
         }
     }
     onChange = (event) =>{
-        var target = event.target;
-        var name = target.name;
-        var value = target.value;
+        var name = event.target.value;
         this.setState({
-            [name] : value
+            filter: {
+                name: name,
+                status: -1
+            }
         })
 
     }
     onClickFilter = () =>{
-        this.props.onClickFilter(this.state.filterName)
+        this.props.onClickFilter(this.state.filter)
     }
     render(){
         var {filterName} = this.state;

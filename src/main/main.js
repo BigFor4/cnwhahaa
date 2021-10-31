@@ -133,10 +133,9 @@ class Main extends Component {
   }
   onClickFilter =(filterName) =>{
     this.setState({
-      filter:{
-        name:filterName.toLowerCase()
-      }
-    })
+      filter:filterName
+    },()=> console.log(this.state.filter))
+    
   }
   onClickSort =(sortName,sortValue)=>{
     this.setState({

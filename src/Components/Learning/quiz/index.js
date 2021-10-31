@@ -1,6 +1,6 @@
 import React,{useState , useEffect} from "react";
 import './quiz.css'
-import { Questionner } from "./Question";
+import { Questionner } from "./Question/";
 import Point from "./Question/point";
 import Loadding from "./Question/loadding";
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";

@@ -75,9 +75,9 @@ class Login extends Component {
 
     handleOnClick = async (provider) =>{
         const res = await socicalMediaAuth(provider)
-
+        console.log(res)
         if(res!== null){
-            if(res.code !== "auth/popup-closed-by-user"){
+            if(res.code !== "auth/popup-closed-by-user" && res.email !== ""){
                 console.log(res);
                 window.location.replace('/job')
                 localStorage.setItem('user' , JSON.stringify(res))

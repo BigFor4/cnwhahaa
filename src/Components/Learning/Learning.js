@@ -75,7 +75,6 @@ class Learning extends Component {
       sortFilter,
       currentPage,
       perPage,
-      totalPage,
       listVisible,
       listTest,
     } = this.state;
@@ -163,9 +162,6 @@ class Learning extends Component {
                       sortFilterOnChange={(value) =>
                         this.sortFilterOnChange(value)
                       }
-                      currentPage={currentPage}
-                      perPage={perPage}
-                      totalPage={totalPage}
                       listItem={listVisible}
                     ></Search>
                   </div>
