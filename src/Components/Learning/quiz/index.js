@@ -3,6 +3,7 @@ import './quiz.css'
 import { Questionner } from "./Question";
 import Point from "./Question/point";
 import Loadding from "./Question/loadding";
+import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 const API_URL1 = 'http://demo4380783.mockable.io/quiz';
 function Quiz() {
     const [questions , setQuestions] = useState([]);
@@ -11,10 +12,13 @@ function Quiz() {
     const [showAnswers , setShowAnswers] = useState(false);
     const [checkAnswers , setCheckAnswers] = useState(true);
     const [selected, setSelected] = useState();
+    const {id} = useParams()
+    const index = Number(id-1)
     useEffect(()=>{
         fetch(API_URL1).then((res)=> res.json())
         .then((data)=>{
-            const questions  = data.results.map((question)=>
+            console.log(data)
+            const questions  = data.posts[index].results.map((question)=>
             ({
                 ...question,
                 answer: [
@@ -24,7 +28,7 @@ function Quiz() {
             }))
             setQuestions(questions)
         });
-    },[]);
+    },[index]);
     const handleAnswer = (answer) =>{
         
         if(checkAnswers === true){

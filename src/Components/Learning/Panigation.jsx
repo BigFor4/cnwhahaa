@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function Panigation({ totalItem, numberOnePage, numberPage ,currentPage}) {
-  const totalPage = Math.ceil(totalItem / numberOnePage);
+export default function Panigation({ totalItem, perPage, numberPage ,currentPage}) {
+  const totalPage = Math.ceil(totalItem / perPage);
   const page = [];
   for (let i = 0; i < totalPage; i++) {
     page.push(i + 1);

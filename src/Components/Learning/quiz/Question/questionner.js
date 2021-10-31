@@ -1,4 +1,4 @@
-import React from "react";
+import React,{memo,useMemo} from "react";
 import Button from '@mui/material/Button';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import HomeIcon from '@mui/icons-material/Home';
@@ -9,11 +9,16 @@ const Questionner = ({
     handlNextQuestion,
     data : {question ,correct_answer,incorrect_answers}}) =>{
 
-    var shuffleAnswer = [correct_answer , ...incorrect_answers].sort(()=> Math.random() - 0.5);
+    
 
-    if(showAnswer === true){
-        shuffleAnswer = [correct_answer , ...incorrect_answers];
+
+
+    const shuffleAnswer = useMemo(()=>{
+        
+        return [correct_answer , ...incorrect_answers].sort(()=> Math.random() - 0.5)
     }
+        ,[correct_answer, incorrect_answers]);
+
         return (
             <div className="card cardtest" >
                 <div className="card-body">
@@ -91,4 +96,4 @@ const Questionner = ({
         
         )
     }
-export default Questionner;
+export default memo(Questionner);

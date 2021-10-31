@@ -29,7 +29,7 @@ class Test extends Component {
                                             <h6>Time:&nbsp;{listItem.time}</h6>
                                         </div>
                                         <div className='col-xs-12 col-sm-4 col-md-6 col-lg-6 start'>
-                                            <button className='btn btn-success' onClick={onTestClick}>Bắt đầu</button>
+                                            <button className='btn btn-success' onClick={()=>onTestClick(listItem.id)}>Bắt đầu</button>
                                         </div>
                                     </div>
                                 </div>

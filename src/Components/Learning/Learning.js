@@ -61,8 +61,8 @@ class Learning extends Component {
       this.setState({ currentPage: page });
     }
   };
-  onTestClick = ()=>{
-    window.location.replace('/quiz')
+  onTestClick = (id)=>{
+    window.location.replace('/quiz/'+id)
   }
   render() {
     var {
@@ -80,9 +80,7 @@ class Learning extends Component {
       listTest,
     } = this.state;
     const totalItem = listTest.length;
-    const numberOnePage = 12;
     const indexOfLastPage = currentPage * perPage;
-
     const indexOfFirstPage = indexOfLastPage - perPage;
     var listItem = listTest.slice(indexOfFirstPage, indexOfLastPage);
     if (searchKeyword !== "") {
@@ -181,7 +179,7 @@ class Learning extends Component {
               <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 page">
                 <Panigation
                   totalItem={totalItem}
-                  numberOnePage={numberOnePage}
+                  perPage={perPage}
                   numberPage={this.numberPage}
                   currentPage={currentPage}
                 />
