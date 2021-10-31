@@ -24,7 +24,7 @@ function Quiz() {
                 answer: [
                     question.correct_answer,
                     ...question.incorrect_answers,
-                ].sort(()=>Math.random()-0.5),
+                ].sort(()=>Math.random()-0.5)
             }))
             setQuestions(questions)
         });
