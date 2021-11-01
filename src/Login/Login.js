@@ -86,7 +86,6 @@ class Login extends Component {
                 window.location.replace('/login')
                 localStorage.removeItem('user');
             }
-            
         }
     }
     render(){
